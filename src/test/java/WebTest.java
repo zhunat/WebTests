@@ -225,6 +225,7 @@ public class WebTest {
         driver.quit();
 
     }
+
     /*TC_11_11 Подтвердите, что если на странице по ссылке http://www.99-bottles-of-beer.net/submitnewlanguage.html ,
      пользователь нажмет кнопку Submit Language,  не заполнив информацию в обязательных полях, будет показана ошибка
 
@@ -238,7 +239,7 @@ public class WebTest {
     5. Закрыть браузер
 */
     @Test
-    public void testButtonSubmitLanguageWhenEmptyInput(){
+    public void testButtonSubmitLanguageWhenEmptyInput() {
 
         String chromeDriver = "webdriver.chrome.driver";
         String driverPath = "C:/chromedriver.exe";
@@ -264,26 +265,26 @@ public class WebTest {
         driver.quit();
     }
 
-/*
-    TC_11_12 Precondition: Если на странице по ссылке http://www.99-bottles-of-beer.net/submitnewlanguage.html ,
-     пользователь нажмет кнопку Submit Language,  не заполнив информацию в обязательных полях, будет показана ошибка
-     с текстом
+    /*
+        TC_11_12 Precondition: Если на странице по ссылке http://www.99-bottles-of-beer.net/submitnewlanguage.html ,
+         пользователь нажмет кнопку Submit Language,  не заполнив информацию в обязательных полях, будет показана ошибка
+         с текстом
 
-    Error: Precondition failed - Incomplete Input.
+        Error: Precondition failed - Incomplete Input.
 
-    Подтвертите, что в тексте ошибки слова Error, Precondition, Incomplete и Input написаны с большой буквы, а слово
-    failed  написано  с маленькой буквы.
-    Так же подтвердите, что в тексте ошибки содержатся знаки :, -  и .
+        Подтвертите, что в тексте ошибки слова Error, Precondition, Incomplete и Input написаны с большой буквы, а слово
+        failed  написано  с маленькой буквы.
+        Так же подтвердите, что в тексте ошибки содержатся знаки :, -  и .
 
-    Шаги:
-    1. Открыть вебсайт на странице
-    2. Нажать на кнопку Submit Language
-    3. Считать текст ошибки
-    4. Подтвердить requirenments
-    5. Закрыть браузер
-*/
+        Шаги:
+        1. Открыть вебсайт на странице
+        2. Нажать на кнопку Submit Language
+        3. Считать текст ошибки
+        4. Подтвердить requirenments
+        5. Закрыть браузер
+    */
     @Test
-    public void testCharactersInErrorMessageVersionOne(){
+    public void testCharactersInErrorMessageVersionOne() {
 
         String chromeDriver = "webdriver.chrome.driver";
         String driverPath = "C:/chromedriver.exe";
@@ -323,8 +324,9 @@ public class WebTest {
 
         driver.quit();
     }
+
     @Test
-    public void testCharactersInErrorMessageVersionTwo(){
+    public void testCharactersInErrorMessageVersionTwo() {
 
         String chromeDriver = "webdriver.chrome.driver";
         String driverPath = "C:/chromedriver.exe";
@@ -347,11 +349,11 @@ public class WebTest {
         String[] array = message.split(" ");
 
 
-        for(int i = 0; i < array.length; i++ ){
-            if(array[i].charAt(0) == 'f' || array[i].charAt(0) == 'F' ) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].charAt(0) == 'f' || array[i].charAt(0) == 'F') {
                 Assert.assertEquals(array[i].charAt(0), Character.toLowerCase(array[i].charAt(0)));
             } else {
-                Assert.assertEquals(array[i].charAt(0),Character.toUpperCase(array[i].charAt(0)));
+                Assert.assertEquals(array[i].charAt(0), Character.toUpperCase(array[i].charAt(0)));
             }
 
         }
@@ -363,7 +365,7 @@ public class WebTest {
     }
 
     @Test
-    public void testCharactersInErrorMessageVersionThree(){
+    public void testCharactersInErrorMessageVersionThree() {
 
         String chromeDriver = "webdriver.chrome.driver";
         String driverPath = "C:/chromedriver.exe";
@@ -394,14 +396,14 @@ public class WebTest {
 
         String[] array = message.split(" ");
 
-        Assert.assertEquals(array[0].charAt(0),expectedResult1);
-        Assert.assertEquals(array[1].charAt(0),expectedResult2);
-        Assert.assertEquals(array[2].charAt(0),expectedResult3);
-        Assert.assertEquals(array[3].charAt(0),expectedResult7);
-        Assert.assertEquals(array[4].charAt(0),expectedResult4);
-        Assert.assertEquals(array[5].charAt(0),expectedResult5);
-        Assert.assertEquals(array[0].charAt(array[0].length()-1),expectedResult6);
-        Assert.assertEquals(array[5].charAt(array[5].length()-1),expectedResult8);
+        Assert.assertEquals(array[0].charAt(0), expectedResult1);
+        Assert.assertEquals(array[1].charAt(0), expectedResult2);
+        Assert.assertEquals(array[2].charAt(0), expectedResult3);
+        Assert.assertEquals(array[3].charAt(0), expectedResult7);
+        Assert.assertEquals(array[4].charAt(0), expectedResult4);
+        Assert.assertEquals(array[5].charAt(0), expectedResult5);
+        Assert.assertEquals(array[0].charAt(array[0].length() - 1), expectedResult6);
+        Assert.assertEquals(array[5].charAt(array[5].length() - 1), expectedResult8);
 
         driver.quit();
     }
@@ -419,7 +421,7 @@ public class WebTest {
     4. Закрыть браузер*/
 
     @Test
-    public void testTableColumns(){
+    public void testTableColumns() {
 
         String chromeDriver = "webdriver.chrome.driver";
         String pathDriver = "C:/chromedriver.exe";
@@ -448,8 +450,8 @@ public class WebTest {
         );
         String actualResult2 = tableFirstRowSecondColumn.getText();
 
-        Assert.assertEquals(actualResult1,expectedResult1);
-        Assert.assertEquals(actualResult2,expectedResult2);
+        Assert.assertEquals(actualResult1, expectedResult1);
+        Assert.assertEquals(actualResult2, expectedResult2);
 
         driver.quit();
     }
@@ -458,7 +460,7 @@ public class WebTest {
      если нажмет на пункты меню Top List → New Comments*/
 
     @Test
-    public void testNewCommentstext(){
+    public void testNewCommentstext() {
 
         String chromeDriver = "webdriver.chrome.driver";
         String pathDriver = "C:/chromedriver.exe";
@@ -502,7 +504,7 @@ public class WebTest {
     4. Закрыть браузер*/
 
     @Test
-    public void testImportantWord(){
+    public void testImportantWord() {
 
         String chromeDriver = "webdriver.chrome.driver";
         String pathDriver = "C:/chromedriver.exe";
@@ -528,7 +530,7 @@ public class WebTest {
 
         Assert.assertEquals(actualResultText, expectedResultText);
         Assert.assertEquals(actualResultStyle, expectedResultStyle);
-        Assert.assertEquals(actualResultTag,expectedResultTag);
+        Assert.assertEquals(actualResultTag, expectedResultTag);
 
         driver.quit();
     }
@@ -543,7 +545,6 @@ public class WebTest {
 
         String chromeDriver = "webdriver.chrome.driver";
         String pathDriver = "C:/chromedriver.exe";
-
 
 
         String expectedResult = "99 bottles of beer on the wall, 99 bottles of beer.\n" +
@@ -668,7 +669,7 @@ public class WebTest {
 
 
         String[] pText = new String[100];
-        for(int i =0; i < pText.length; i++){
+        for (int i = 0; i < pText.length; i++) {
             int index = i + 1;
             pText[i] = driver.findElement(
                     By.xpath("//body/div[@id='wrap']/div[@id='main']/p[" + index + "]")).getText();
@@ -676,7 +677,7 @@ public class WebTest {
 
 
         String actualResult = "";
-        for(int i = 0; i < pText.length; i++){
+        for (int i = 0; i < pText.length; i++) {
             actualResult += pText[i];
         }
         //System.out.println(actualResult);
@@ -687,36 +688,35 @@ public class WebTest {
     }
 
 
+    @Test
+    public void testLastLanguage() {
+        /**
+         * Подтвердите, что в меню BROWSE LANGUAGES, подменю  M, последний программный язык в таблице -  MySQL
+         * */
+        String chromeDriver = "webdriver.chrome.driver";
+        String pathDriver = "C:/chromedriver.exe";
+        String expectedResult = "MySQL";
 
-        @Test
-        public void testLastLanguage() {
-            /**
-             * Подтвердите, что в меню BROWSE LANGUAGES, подменю  M, последний программный язык в таблице -  MySQL
-             * */
-            String chromeDriver = "webdriver.chrome.driver";
-            String pathDriver = "C:/chromedriver.exe";
-            String expectedResult = "MySQL";
+        System.setProperty(chromeDriver, pathDriver);
+        WebDriver driver = new ChromeDriver();
 
-            System.setProperty(chromeDriver, pathDriver);
-            WebDriver driver = new ChromeDriver();
+        driver.get("http://www.99-bottles-of-beer.net");
 
-            driver.get("http://www.99-bottles-of-beer.net");
+        driver.findElement(By.xpath("//li/a[@href='/abc.html']")).click();
+        driver.findElement(By.xpath("//a[@href='m.html']")).click();
+        WebElement text = driver.findElement(By.xpath("//tr[last()]/td/a"));
+        String actualResult = text.getText();
 
-            driver.findElement(By.xpath("//li/a[@href='/abc.html']")).click();
-            driver.findElement(By.xpath("//a[@href='m.html']")).click();
-            WebElement text = driver.findElement(By.xpath("//tr[last()]/td/a"));
-            String actualResult = text.getText();
+        Assert.assertEquals(actualResult, expectedResult);
 
-            Assert.assertEquals(actualResult, expectedResult);
-
-            driver.quit();
-        }
+        driver.quit();
+    }
 
     /*    TC_12_03 Подтвердите, что в меню BROWSE LANGUAGES существует таблица с заголовками Language, Author, Date,
        Comments, Rate
 */
     @Test
-    public void testTableTreadInBrowselanguge(){
+    public void testTableTreadInBrowselanguge() {
 
         String chromeDriver = "webdriver.chrome.driver";
         String pathDriver = "C:/chromedriver.exe";
@@ -730,8 +730,8 @@ public class WebTest {
         driver.findElement(By.xpath("//li/a[@href='/abc.html']")).click();
 
         String[] actualResult = new String[5];
-        for(int i = 0; i < actualResult.length; i++){
-            int index = i+1;
+        for (int i = 0; i < actualResult.length; i++) {
+            int index = i + 1;
             actualResult[i] = driver.findElement(By.xpath("//table[@id='category']/tbody/tr/th[" + index + "]")).getText();
         }
         //System.out.println(Arrays.toString(actualResult));
@@ -774,30 +774,31 @@ public class WebTest {
 
         driver.quit();
     }
-        @Test
-        //TC_12_05 Подтвердите, что на сайте существует 10 языков, названия которых начинаются с цифр.
-        public void testLanguagesWithDigitCount(){
-            String chromeDriver = "webdriver.chrome.driver";
-            String pathDriver = "C:/chromedriver.exe";
-            int expectedResult = 10;
 
-            System.setProperty(chromeDriver, pathDriver);
-            WebDriver driver = new ChromeDriver();
+    @Test
+    //TC_12_05 Подтвердите, что на сайте существует 10 языков, названия которых начинаются с цифр.
+    public void testLanguagesWithDigitCount() {
+        String chromeDriver = "webdriver.chrome.driver";
+        String pathDriver = "C:/chromedriver.exe";
+        int expectedResult = 10;
 
-            driver.get("http://www.99-bottles-of-beer.net");
+        System.setProperty(chromeDriver, pathDriver);
+        WebDriver driver = new ChromeDriver();
 
-            driver.findElement(By.xpath("//li/a[@href='/abc.html']")).click();
+        driver.get("http://www.99-bottles-of-beer.net");
 
-            driver.findElement(By.xpath("//a[@href='0.html']")).click();
+        driver.findElement(By.xpath("//li/a[@href='/abc.html']")).click();
 
-            //count sibling elements
-            List<WebElement> rows = driver.findElements(By.xpath("//th[text()='Language']/ancestor::tr/following-sibling::tr"));
-            int actualResult = rows.size();
+        driver.findElement(By.xpath("//a[@href='0.html']")).click();
 
-            Assert.assertEquals(actualResult, expectedResult);
+        //find and count sibling elements
+        List<WebElement> rows = driver.findElements(By.xpath("//tr[contains(.,'Language')]/following-sibling::tr"));
+        int actualResult = rows.size();
 
-            driver.quit();
-        }
+        Assert.assertEquals(actualResult, expectedResult);
+
+        driver.quit();
+    }
 
     /*TC_12_06 Подтвердите, что если на странице Sign Guestbook http://www.99-bottles-of-beer.net/signv2.html вы
     заполните все поля формы, но введете случайно сгенерированное трехзначное число в поле  Security Code: ,
@@ -820,7 +821,7 @@ public class WebTest {
         driver.findElement(By.xpath("//p/input[@name='email']")).sendKeys("test@gmail.com");
         driver.findElement(By.xpath("//p/input[@name='homepage']")).sendKeys("https//test.com");
 
-        int random = (int) (100 + Math.random() *(1000-100));
+        int random = (int) (100 + Math.random() * (1000 - 100));
         //System.out.println(random);
 
         driver.findElement(By.xpath("//p/input[@name='captcha']")).sendKeys(String.valueOf(random));
@@ -830,13 +831,158 @@ public class WebTest {
         WebElement errorMessage = driver.findElement(By.xpath("//*[@id='main']/p[contains(., 'Error')]"));
         String actualResult = errorMessage.getText();
 
+        Assert.assertEquals(actualResult, expectedResult);
+        driver.quit();
+
+    }
+        /*TC_12_08 Подтвердите, что решение на языке Shakespeare входит в топ 20 всех решений, в топ 10 решений на
+         Esoteric Languages и в топ 6 решений-хитов. Но решение на языке Shakespeare не входит в список топовых
+         решений на реальных языках программирования.
+        (Можно написать одним тестом, но так, чтобы все Asserts были в конце теста. Или можно написать отдельные
+         тесты на каждый requirement.)*/
+
+    @Test
+    public void testShakespeareLanguageRatings() {
+
+        String chromeDriver = "webdriver.chrome.driver";
+        String pathDriver = "C:/chromedriver.exe";
+        String url = "http://www.99-bottles-of-beer.net";
+        String expectedResultTR = "Shakespeare is in 20 Top Rated list";
+        String expectedResultTRE = "Shakespeare is in 10 Top Rated Ezoteric list";
+        String expectedResultTH = "Shakespeare is in 6 Top Hits list";
+        String expectedResultTRR = "Shakespeare is not in Top Rated Real list";
+
+
+        System.setProperty(chromeDriver, pathDriver);
+
+        WebDriver driver = new ChromeDriver();
+
+        driver.get(url);
+
+        driver.findElement(By.xpath("//*[@id='menu']/li/a[@href='/toplist.html']")).click();
+
+        List<WebElement> listTR = driver.findElements(
+                By.xpath("//table[@id='category']/tbody/tr[contains(.,'Shakespeare')]/preceding-sibling::tr"));
+
+        String actualresultTR = "";
+
+        if (listTR.size() > 0 && listTR.size() < 20) {
+            actualresultTR = "Shakespeare is in 20 Top Rated list";
+        } else {
+            actualresultTR = "Shakespeare is not in 20 Top Rated list";
+        }
+
+        driver.findElement(By.xpath("//a[@href='./toplist_esoteric.html']")).click();
+
+        List<WebElement> listTRE = driver.findElements(
+                By.xpath("//table[@id='category']/tbody/tr[contains(.,'Shakespeare')]/preceding-sibling::tr"));
+
+        String actualresultTRE = "";
+
+        if (listTRE.size() > 0 && listTRE.size() < 10) {
+            actualresultTRE = "Shakespeare is in 10 Top Rated Ezoteric list";
+        } else {
+            actualresultTRE = "Shakespeare is not in 10 Top Rated Ezoteric list";
+        }
+
+        driver.findElement(By.xpath("//a[@href='./tophits.html']")).click();
+
+        List<WebElement> listTH = driver.findElements(
+                By.xpath("//tr[contains(.,'Shakespeare')]/preceding-sibling::tr"));
+
+        String actualresultTH = "";
+
+        if (listTH.size() > 0 && listTH.size() < 20) {
+            actualresultTH = "Shakespeare is in 6 Top Hits list";
+        } else {
+            actualresultTH = "Shakespeare is not in 6 Top Hits list";
+        }
+
+        driver.findElement(By.xpath("//a[@href='./toplist_real.html']")).click();
+
+        List<WebElement> listTRR = driver.findElements(
+                By.xpath("//tr[contains(.,'Shakespeare')]"));
+
+        String actualresultTRR = "";
+
+        if (listTRR.size() > 0) {
+            actualresultTRR = "Shakespeare is in  Top Rated Real list";
+        } else {
+            actualresultTRR = "Shakespeare is not in Top Rated Real list";
+        }
+
+        Assert.assertEquals(actualresultTR, expectedResultTR);
+        Assert.assertEquals(actualresultTRE, expectedResultTRE);
+        Assert.assertEquals(actualresultTH, expectedResultTH);
+        Assert.assertEquals(actualresultTRR, expectedResultTRR);
+
+        driver.quit();
+    }
+
+    //TC_12_09 Подтвердите, что существует 7 версий решений на языке программирования Java.
+
+    @Test
+    public void testJavaVersions() {
+
+        String chromeDriver = "webdriver.chrome.driver";
+        String pathDriver = "C:/chromedriver.exe";
+        int expectedResult = 7;
+
+        System.setProperty(chromeDriver, pathDriver);
+
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("http://www.99-bottles-of-beer.net/signv2.html");
+
+        driver.findElement(By.xpath("//ul[@id='menu']/li/a[@href='/search.html']")).click();
+
+        driver.findElement(By.xpath("//*[@action='search.html']/p/input[@name='search']"))
+                .sendKeys("java");
+
+        driver.findElement(By.xpath("//*[@action='search.html']/p/input[@type='submit']")).click();
+
+        List<WebElement> listJava = driver.findElements(
+                By.xpath("//tr[contains(.,'Java ')]"));
+
+        int actualResult = listJava.size();
+
+        Assert.assertEquals(actualResult, expectedResult);
+
+        driver.quit();
+    }
+    //TC_12_10 Подтвердите, что самое большое количество комментариев для решений на языке Java имеет
+    // версия “object-oriented version”
+
+    @Test
+    public void testLanguageWithMostComments() {
+
+        String chromeDriver = "webdriver.chrome.driver";
+        String pathDriver = "C:/chromedriver.exe";
+        String expectedResult = "Java (object-oriented version)";
+
+        System.setProperty(chromeDriver, pathDriver);
+
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("http://www.99-bottles-of-beer.net/signv2.html");
+
+        driver.findElement(By.xpath("//ul[@id='menu']/li/a[@href='/search.html']")).click();
+
+        driver.findElement(By.xpath("//*[@action='search.html']/p/input[@name='search']"))
+                .sendKeys("java");
+
+        driver.findElement(By.xpath("//*[@action='search.html']/p/input[@type='submit']")).click();
+
+        String actualResult = driver.findElement(By.xpath("//tr[contains(.,'Language')]/following-sibling::tr[1]/td/a"))
+                .getText();
+
         Assert.assertEquals(actualResult,expectedResult);
+
         driver.quit();
     }
 
 
-
-    }
+}
 
 
 
